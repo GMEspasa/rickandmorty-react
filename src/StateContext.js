@@ -1,4 +1,4 @@
-import { createContext, useState, useMemo } from "react";
+import { createContext, useState } from "react";
 
 export const StateContext = createContext({
   stateData: {},
@@ -8,8 +8,10 @@ export const StateContext = createContext({
 const StateProvider = ({ children }) => {
   const [stateData, setStateData] = useState([]);
 
-  const URL = "https://rickandmortyapi.com/api/character";
+  const [ page, setPage ] = useState(1);
 
+  const URL = "https://rickandmortyapi.com/api/character";
+/*
   useMemo(() => {
     const fetchCharacters = async () => {
       try {
@@ -23,9 +25,9 @@ const StateProvider = ({ children }) => {
     };
     fetchCharacters();
   }, [setStateData]);
-
+*/
   return (
-    <StateContext.Provider value={{ stateData, setStateData }}>
+    <StateContext.Provider value={{ stateData, setStateData, URL, page, setPage}}>
       {children}
     </StateContext.Provider>
   );
