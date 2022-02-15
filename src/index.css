@@ -34,25 +34,23 @@ a {
 
 .list-conatiner {
   margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
   border-radius:15px;
   border:5px solid #666;
 }
-
+/*
 .character-container {
   margin: 10px;
   border-radius:15px;
   border:5px solid #666;
 }
-
+*/
 .character-container__avatar {
   border-bottom: 5px solid #666;
 }
+
 
 .character-image {
   border-radius:150px;
   border:5px solid #666;
 }
+
