@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -47,7 +46,6 @@ a {
 .character-container__avatar {
   border-bottom: 5px solid #666;
 }
-
 
 .character-image {
   border-radius:150px;

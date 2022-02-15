@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { StateContext } from "../StateContext";
 
-import Character from "./Character";
-import FilterByName from "./FilterByName";
+import Character from "../components/Character";
+import FilterByName from "../components/FilterByName";
 /*
 const CharactersList = () => {
   const { stateData } = useContext(StateContext);
@@ -40,6 +40,7 @@ const CharactersList = () =>{
           {stateData?.map((element, i) => (
             <Character 
             key={i}
+            id={element.id}
             status={element.status} 
             name={element.name} 
             species={element.species} 

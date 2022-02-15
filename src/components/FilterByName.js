@@ -35,7 +35,7 @@ const FilterByName = () => {
           let data = await response.json();
             
           setStateData(data.results);
-          console.log(data.results);
+          //console.log(data.results);
 
         } catch (e) {
           console.error(e);

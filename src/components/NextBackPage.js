@@ -27,7 +27,7 @@ const NextBackPage = ({page, setPage}) => {
         let data = await response.json();
 
         setStateData(data.results);
-        console.log(data.results);
+        //console.log(data.results);
       };
     fetchPages();
     }, [page])
