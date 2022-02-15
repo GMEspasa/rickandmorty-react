@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { StateContext } from "../StateContext";
+import {Link} from 'react-router-dom';
 
 /*
 const Character = ({ name, status, species, image }) => {
@@ -22,9 +23,8 @@ const Character = ({ name, status, species, image, id}) => {
 
   const handleOnClick = (e) => {
     debugger
-    console.log(e.target.id)
-    console.log(typeof(e.target.id))
-
+    const charId = e.target.id
+    console.log(charId)
     setCharacterSelected(parseInt(e.target.id))
     console.log(characterSelected)
   }
@@ -34,13 +34,15 @@ const Character = ({ name, status, species, image, id}) => {
     className="group character-container"
     onClick={handleOnClick}>             
       <div className="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8 character-container__avatar">
-        <img 
-          id={id}
-          width={200}
-          src={image}
-          alt={'Rick and Morty character'}
-          className="w-full h-full object-center object-cover group-hover:opacity-75 character-image"
-        />
+        <Link to={'/CharacterSpecs'}>
+          <img 
+            id={id}
+            width={200}
+            src={image}
+            alt={'Rick and Morty character'}
+            className="w-full h-full object-center object-cover group-hover:opacity-75 character-image"
+          />
+        </Link>
       </div>
       <h3 className="mt-4 text-sm text-gray-700" id={id}>{name}</h3>
       <p className="mt-1 text-lg font-medium text-gray-900" id={id}>{status}</p>
