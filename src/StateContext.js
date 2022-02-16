@@ -7,10 +7,9 @@ export const StateContext = createContext({
 
 const StateProvider = ({ children }) => {
   const [stateData, setStateData] = useState([]);
-
   const [characterSelected, setCharacterSelected] = useState('');
-
   const [ page, setPage ] = useState(1);
+  const [ home, setHome ] = useState(false);
 
   const URL = "https://rickandmortyapi.com/api/character";
 /*
@@ -29,7 +28,7 @@ const StateProvider = ({ children }) => {
   }, [setStateData]);
 */
   return (
-    <StateContext.Provider value={{ stateData, setStateData, URL, page, setPage, characterSelected, setCharacterSelected }}>
+    <StateContext.Provider value={{ stateData, setStateData, URL, page, setPage, characterSelected, setCharacterSelected, home, setHome }}>
       {children}
     </StateContext.Provider>
   );
