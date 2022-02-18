@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { StateContext } from "../StateContext";
 
-import Character from "../components/Character";
+import Character from "../components/Character.tsx";
 
 const CharacterSpecs = () => {
   const { characterSelected, setCharacterSelected, stateData } =

@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { StateContext } from "../StateContext";
 
-import Character from "../components/Character";
-import FilterByName from "../components/FilterByName";
-import NextBackPage from "../components/NextBackPage";
+import Character from "../components/Character.tsx";
+import FilterByName from "../components/FilterByName.tsx";
+import NextBackPage from "../components/NextBackPage.tsx";
 
 const CharactersList = () => {
   const { stateData, page, setPage } = useContext(StateContext);
